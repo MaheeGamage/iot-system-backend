@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Test
+
+        // register form
+        form(method='POST' action='/test')
+          div.form-group
+            label(for='name') Value:
+            input#name.form-control(type='text', placeholder='first and last' name='value')
+          button.btn.btn-primary(type='submit') Submit
+
+        ul
+            each val in value
+                li=val.val
